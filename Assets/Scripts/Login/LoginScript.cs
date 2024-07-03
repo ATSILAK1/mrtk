@@ -1,5 +1,5 @@
 using System.ServiceModel;
-
+using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -21,7 +21,13 @@ public class LoginScript : MonoBehaviour
 
         try
         {
-            UserInfo user =  ServiceScript.getInstance().GetUser(login, motdepasse, "LDAP://vipadyleg.si.francetelecom.fr:636/DC=ad,DC=francetelecom,DC=fr", "AD");
+            // user =  ServiceScript.getInstance().GetUserAsync(login, motdepasse, "LDAP://vipadyleg.si.francetelecom.fr:636/DC=ad,DC=francetelecom,DC=fr", "AD");
+            Task task = new Task(async () =>
+            {
+              UserInfo user =  await ServiceScript.getInstance().GetUserAsync(login, motdepasse, "LDAP://vipadyleg.si.francetelecom.fr:636/DC=ad,DC=francetelecom,DC=fr", "AD");
+            });
+            task.Start();
+
         }catch(FaultException e)
         {
             false_Password.text = "Mot de Passe Incorrect";

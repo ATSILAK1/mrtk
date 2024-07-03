@@ -47,6 +47,8 @@ namespace Transplan.Common
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(RepartiteurInfo))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SupportRepartiteurInfo))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(SystemeEnergieInfo))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DalleInfoLight))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DalleInfo))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Transplan.Common.BusinessObjects.User.ScopeRoleInfo))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Transplan.Common.BusinessObjects.Cabling.ConnexionConnecteurInfo))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Transplan.Common.BusinessObjects.Connector.ConnectorInfo))]
@@ -141,6 +143,8 @@ public partial class PinStateUsage : Transplan.Common.DisposableObject
 [System.Runtime.Serialization.KnownTypeAttribute(typeof(RepartiteurInfo))]
 [System.Runtime.Serialization.KnownTypeAttribute(typeof(SupportRepartiteurInfo))]
 [System.Runtime.Serialization.KnownTypeAttribute(typeof(SystemeEnergieInfo))]
+[System.Runtime.Serialization.KnownTypeAttribute(typeof(DalleInfoLight))]
+[System.Runtime.Serialization.KnownTypeAttribute(typeof(DalleInfo))]
 [System.Runtime.Serialization.KnownTypeAttribute(typeof(Transplan.Common.BusinessObjects.User.ScopeRoleInfo))]
 [System.Runtime.Serialization.KnownTypeAttribute(typeof(Transplan.Common.BusinessObjects.Cabling.ConnexionConnecteurInfo))]
 [System.Runtime.Serialization.KnownTypeAttribute(typeof(Transplan.Common.BusinessObjects.Connector.ConnectorInfo))]
@@ -2052,6 +2056,231 @@ public partial class SystemeEnergieInfo : BusinessObject
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+[System.Runtime.Serialization.DataContractAttribute(Name="DalleInfoLight", Namespace="")]
+[System.Runtime.Serialization.KnownTypeAttribute(typeof(DalleInfo))]
+public partial class DalleInfoLight : BusinessObject
+{
+    
+    private string DalleNomField;
+    
+    private bool IsVirtualField;
+    
+    private string PositionField;
+    
+    private long SalleIdField;
+    
+    private System.Nullable<long> StatutIdField;
+    
+    private string TypeField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute()]
+    public string DalleNom
+    {
+        get
+        {
+            return this.DalleNomField;
+        }
+        set
+        {
+            this.DalleNomField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute()]
+    public bool IsVirtual
+    {
+        get
+        {
+            return this.IsVirtualField;
+        }
+        set
+        {
+            this.IsVirtualField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute()]
+    public string Position
+    {
+        get
+        {
+            return this.PositionField;
+        }
+        set
+        {
+            this.PositionField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute()]
+    public long SalleId
+    {
+        get
+        {
+            return this.SalleIdField;
+        }
+        set
+        {
+            this.SalleIdField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute()]
+    public System.Nullable<long> StatutId
+    {
+        get
+        {
+            return this.StatutIdField;
+        }
+        set
+        {
+            this.StatutIdField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute()]
+    public string Type
+    {
+        get
+        {
+            return this.TypeField;
+        }
+        set
+        {
+            this.TypeField = value;
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+[System.Runtime.Serialization.DataContractAttribute(Name="DalleInfo", Namespace="")]
+public partial class DalleInfo : DalleInfoLight
+{
+    
+    private bool CanArchivePreviousDallePositionField;
+    
+    private System.Nullable<long> ChargeField;
+    
+    private System.Nullable<System.DateTime> DateAffectField;
+    
+    private long HeightField;
+    
+    private System.Nullable<short> LibreField;
+    
+    private long PosXField;
+    
+    private long PosYField;
+    
+    private long WidthField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute()]
+    public bool CanArchivePreviousDallePosition
+    {
+        get
+        {
+            return this.CanArchivePreviousDallePositionField;
+        }
+        set
+        {
+            this.CanArchivePreviousDallePositionField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute()]
+    public System.Nullable<long> Charge
+    {
+        get
+        {
+            return this.ChargeField;
+        }
+        set
+        {
+            this.ChargeField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute()]
+    public System.Nullable<System.DateTime> DateAffect
+    {
+        get
+        {
+            return this.DateAffectField;
+        }
+        set
+        {
+            this.DateAffectField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute()]
+    public long Height
+    {
+        get
+        {
+            return this.HeightField;
+        }
+        set
+        {
+            this.HeightField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute()]
+    public System.Nullable<short> Libre
+    {
+        get
+        {
+            return this.LibreField;
+        }
+        set
+        {
+            this.LibreField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute()]
+    public long PosX
+    {
+        get
+        {
+            return this.PosXField;
+        }
+        set
+        {
+            this.PosXField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute()]
+    public long PosY
+    {
+        get
+        {
+            return this.PosYField;
+        }
+        set
+        {
+            this.PosYField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute()]
+    public long Width
+    {
+        get
+        {
+            return this.WidthField;
+        }
+        set
+        {
+            this.WidthField = value;
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
 [System.Runtime.Serialization.DataContractAttribute(Name="UserInfo", Namespace="")]
 public partial class UserInfo : Transplan.Common.BusinessObjects.User.UserLightInfo
 {
@@ -2097,6 +2326,8 @@ public partial class UserInfo : Transplan.Common.BusinessObjects.User.UserLightI
     private string TelField;
     
     private string TownField;
+    
+    private Transplan.Common.Enumerators.UsrLanguageEnum UsrLanguageField;
     
     private Transplan.Common.Enumerators.UsrNormeEnum UsrNormeField;
     
@@ -2372,6 +2603,19 @@ public partial class UserInfo : Transplan.Common.BusinessObjects.User.UserLightI
         set
         {
             this.TownField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute()]
+    public Transplan.Common.Enumerators.UsrLanguageEnum UsrLanguage
+    {
+        get
+        {
+            return this.UsrLanguageField;
+        }
+        set
+        {
+            this.UsrLanguageField = value;
         }
     }
     
@@ -2713,11 +2957,29 @@ public interface IService1
     [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllSubSystemInfo", ReplyAction="http://tempuri.org/IService1/GetAllSubSystemInfoResponse")]
     System.Threading.Tasks.Task<Transplan.Common.BusinessObjects.SystemComponents.SystemInfo[]> GetAllSubSystemInfoAsync(long userId, long sysId);
     
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllSubSystemInfoList", ReplyAction="http://tempuri.org/IService1/GetAllSubSystemInfoListResponse")]
+    Transplan.Common.BusinessObjects.SystemComponents.SystemInfo[] GetAllSubSystemInfoList(long userId, long sysId);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllSubSystemInfoList", ReplyAction="http://tempuri.org/IService1/GetAllSubSystemInfoListResponse")]
+    System.Threading.Tasks.Task<Transplan.Common.BusinessObjects.SystemComponents.SystemInfo[]> GetAllSubSystemInfoListAsync(long userId, long sysId);
+    
     [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetSystemInfo", ReplyAction="http://tempuri.org/IService1/GetSystemInfoResponse")]
     Transplan.Common.BusinessObjects.SystemComponents.SystemInfo GetSystemInfo(long userId, long sysId);
     
     [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetSystemInfo", ReplyAction="http://tempuri.org/IService1/GetSystemInfoResponse")]
     System.Threading.Tasks.Task<Transplan.Common.BusinessObjects.SystemComponents.SystemInfo> GetSystemInfoAsync(long userId, long sysId);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDalleInfoByRoom", ReplyAction="http://tempuri.org/IService1/GetDalleInfoByRoomResponse")]
+    DalleInfo[] GetDalleInfoByRoom(long userId, long roomId);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDalleInfoByRoom", ReplyAction="http://tempuri.org/IService1/GetDalleInfoByRoomResponse")]
+    System.Threading.Tasks.Task<DalleInfo[]> GetDalleInfoByRoomAsync(long userId, long roomId);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRoomSystem", ReplyAction="http://tempuri.org/IService1/GetRoomSystemResponse")]
+    Transplan.Common.BusinessObjects.SystemComponents.SystemInfo[] GetRoomSystem(long userId, long roomId);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRoomSystem", ReplyAction="http://tempuri.org/IService1/GetRoomSystemResponse")]
+    System.Threading.Tasks.Task<Transplan.Common.BusinessObjects.SystemComponents.SystemInfo[]> GetRoomSystemAsync(long userId, long roomId);
 }
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2864,6 +3126,16 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
         return base.Channel.GetAllSubSystemInfoAsync(userId, sysId);
     }
     
+    public Transplan.Common.BusinessObjects.SystemComponents.SystemInfo[] GetAllSubSystemInfoList(long userId, long sysId)
+    {
+        return base.Channel.GetAllSubSystemInfoList(userId, sysId);
+    }
+    
+    public System.Threading.Tasks.Task<Transplan.Common.BusinessObjects.SystemComponents.SystemInfo[]> GetAllSubSystemInfoListAsync(long userId, long sysId)
+    {
+        return base.Channel.GetAllSubSystemInfoListAsync(userId, sysId);
+    }
+    
     public Transplan.Common.BusinessObjects.SystemComponents.SystemInfo GetSystemInfo(long userId, long sysId)
     {
         return base.Channel.GetSystemInfo(userId, sysId);
@@ -2872,6 +3144,26 @@ public partial class Service1Client : System.ServiceModel.ClientBase<IService1>,
     public System.Threading.Tasks.Task<Transplan.Common.BusinessObjects.SystemComponents.SystemInfo> GetSystemInfoAsync(long userId, long sysId)
     {
         return base.Channel.GetSystemInfoAsync(userId, sysId);
+    }
+    
+    public DalleInfo[] GetDalleInfoByRoom(long userId, long roomId)
+    {
+        return base.Channel.GetDalleInfoByRoom(userId, roomId);
+    }
+    
+    public System.Threading.Tasks.Task<DalleInfo[]> GetDalleInfoByRoomAsync(long userId, long roomId)
+    {
+        return base.Channel.GetDalleInfoByRoomAsync(userId, roomId);
+    }
+    
+    public Transplan.Common.BusinessObjects.SystemComponents.SystemInfo[] GetRoomSystem(long userId, long roomId)
+    {
+        return base.Channel.GetRoomSystem(userId, roomId);
+    }
+    
+    public System.Threading.Tasks.Task<Transplan.Common.BusinessObjects.SystemComponents.SystemInfo[]> GetRoomSystemAsync(long userId, long roomId)
+    {
+        return base.Channel.GetRoomSystemAsync(userId, roomId);
     }
 }
 namespace Transplan.Common.BusinessObjects.Catalogue
@@ -4220,9 +4512,15 @@ namespace Transplan.Common.BusinessObjects.Repartiteur
         
         private System.Nullable<int> ElevationField;
         
+        private System.Nullable<long> EtatIdField;
+        
         private System.Nullable<int> HauteurField;
         
+        private System.Nullable<long> NatureStockIdField;
+        
         private string OrientationField;
+        
+        private System.Nullable<long> UsageIdField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<long> CacId
@@ -4251,6 +4549,19 @@ namespace Transplan.Common.BusinessObjects.Repartiteur
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<long> EtatId
+        {
+            get
+            {
+                return this.EtatIdField;
+            }
+            set
+            {
+                this.EtatIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<int> Hauteur
         {
             get
@@ -4264,6 +4575,19 @@ namespace Transplan.Common.BusinessObjects.Repartiteur
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<long> NatureStockId
+        {
+            get
+            {
+                return this.NatureStockIdField;
+            }
+            set
+            {
+                this.NatureStockIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Orientation
         {
             get
@@ -4273,6 +4597,19 @@ namespace Transplan.Common.BusinessObjects.Repartiteur
             set
             {
                 this.OrientationField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<long> UsageId
+        {
+            get
+            {
+                return this.UsageIdField;
+            }
+            set
+            {
+                this.UsageIdField = value;
             }
         }
     }
@@ -4972,6 +5309,8 @@ namespace Transplan.Common.BusinessObjects.SystemComponents
         
         private RefModuleAppInfo[] ModulesApplicatifsField;
         
+        private System.Nullable<long> NatureStockIdField;
+        
         private string NumeroCommande26EField;
         
         private long OffsetXField;
@@ -5256,6 +5595,19 @@ namespace Transplan.Common.BusinessObjects.SystemComponents
             set
             {
                 this.ModulesApplicatifsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<long> NatureStockId
+        {
+            get
+            {
+                return this.NatureStockIdField;
+            }
+            set
+            {
+                this.NatureStockIdField = value;
             }
         }
         
@@ -5868,6 +6220,21 @@ namespace Transplan.Common.Enumerators
 {
     using System.Runtime.Serialization;
     
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UsrLanguageEnum", Namespace="http://schemas.datacontract.org/2004/07/Transplan.Common.Enumerators")]
+    public enum UsrLanguageEnum : int
+    {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        FR = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        EN = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        None = 2,
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="UsrNormeEnum", Namespace="http://schemas.datacontract.org/2004/07/Transplan.Common.Enumerators")]

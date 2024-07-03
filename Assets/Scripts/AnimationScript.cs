@@ -20,7 +20,7 @@ public class AnimationScript : MonoBehaviour
         //var systeme = ServiceScript.getInstance().GetSystemWithAllSubSystemAsync(user.Id, 271158);
 
        
-        Debug.Log(user.Name != null ? "plein" : "Rien");
+        //Debug.Log(user.Name != null ? "plein" : "Rien");
         
         //var cat = service1.GetCatInfoByUserId(user.Id, 13125).Catalog;
         //text.text  = "Nom :" + cat.Name;
@@ -35,9 +35,9 @@ public class AnimationScript : MonoBehaviour
 
      //   text.text += "\n =========================== Sub System ==================================";
 
-        Debug.Log(service1.GetChildrenOfSystem(user.Id, 271158).GetValue(1));
-        foreach (var elem in service1.GetChildrenOfSystem(user.Id, 271158))
-            Debug.Log(elem);
+        //Debug.Log(service1.GetChildrenOfSystem(user.Id, 271158).GetValue(1));
+        //foreach (var elem in service1.GetChildrenOfSystem(user.Id, 271158))
+        //    Debug.Log(elem);
       
         //foreach(var elem in service1.GetAllSubSystemInfo(284309))
         //{

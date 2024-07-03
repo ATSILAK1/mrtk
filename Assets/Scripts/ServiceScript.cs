@@ -25,13 +25,18 @@ public class ServiceScript : MonoBehaviour
 
                     var httpTransportBindingElement = new HttpTransportBindingElement
                     {
-                        MaxReceivedMessageSize = int.MaxValue
+                        MaxReceivedMessageSize = int.MaxValue,
+                        MaxBufferPoolSize = int.MaxValue,
+                        MaxBufferSize = int.MaxValue,
+                        
+                        
                     };
 
                     TextMessageEncodingBindingElement textMessageEncodingBindingElement = new TextMessageEncodingBindingElement
                     {
                         MessageVersion = MessageVersion.Soap11,
                         WriteEncoding = Encoding.Default,
+                        
                     };
 
                     // 65536 * 50;
@@ -45,6 +50,7 @@ public class ServiceScript : MonoBehaviour
                     
 
                  }
+               // il faut changer Le login et le mot de passe par le playerPrefs
                user =  clientService.GetUser("PJJD4552", "Nourra123456@", "LDAP://vipadyleg.si.francetelecom.fr:636/DC=ad,DC=francetelecom,DC=fr", "AD");
         return clientService;
            
