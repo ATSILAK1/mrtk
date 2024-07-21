@@ -48,7 +48,7 @@ public class EquipementScript : MonoBehaviour
             obj.texture = LoadTexture(image);
             obj.transform.localScale = new Vector3(rackingZoneWidth, catalogue.Catalog.Hauteur) * scale ;
             Vector3 position = PositionInBaie(elem, mainEquipementCatalogue, slotHeight);
-            Debug.Log("Log Position :" + position + " Baie Position "+ elem.BaiePosition );
+            
             
             if (elem.FaceInParent == "Avant")
             instance.GetComponent<RectTransform>().localPosition = new Vector3(position.x,(float) elem.BaiePosition, 0) * 0.01f ;

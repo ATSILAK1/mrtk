@@ -27,14 +27,13 @@ public class EquipmentGenerator : MonoBehaviour
         var results = service.GetRoomSystem(ServiceScript.user.Id, idroom);
 
         foreach (var item in results)
-        {
-            //Debug.Log(item.DalleId.ToString());
-            //GameObject gameObject = GameObject.Find(item.DalleId.ToString());
-            //Debug.Log(gameObject.name);
-            var obj = Instantiate(baie);
-            obj.transform.GetChild(0).GetComponent<BaieScript>().equipmentProperty = item.Id;
+        {   
             
-            //obj.transform.position = gameObject.transform.position;
+            var obj = Instantiate(baie);
+            obj.name = item.Name + " " + item.Id;
+            
+            obj.transform.GetChild(0).GetComponent<BaieScript>().equipmentProperty = item.Id;
+            obj.transform.position = GameObject.Find(item.DalleId.ToString()).transform.position;
         }
 
     }
