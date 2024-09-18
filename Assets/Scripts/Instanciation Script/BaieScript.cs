@@ -49,7 +49,7 @@ public class BaieScript : MonoBehaviour
     void GetBaie()
     {
 
-        // the code that you want to measure comes here
+    
 
         //il faut changer cette ligne pour l'adapter 
         //equipement = FindAnyObjectByType<ButtonInstance>().GetEquipementId(); 
