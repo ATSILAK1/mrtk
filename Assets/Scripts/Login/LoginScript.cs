@@ -21,10 +21,10 @@ public class LoginScript : MonoBehaviour
 
         try
         {
-            // user =  ServiceScript.getInstance().GetUserAsync(login, motdepasse, "LDAP://vipadyleg.si.francetelecom.fr:636/DC=ad,DC=francetelecom,DC=fr", "AD");
+            // user =  ServiceScript.getInstance().GetUserAsync(login, motdepasse, "Link", "AD");
             Task task = new Task(async () =>
             {
-              UserInfo user =  await ServiceScript.getInstance().GetUserAsync(login, motdepasse, "LDAP://vipadyleg.si.francetelecom.fr:636/DC=ad,DC=francetelecom,DC=fr", "AD");
+              UserInfo user =  await ServiceScript.getInstance().GetUserAsync(login, motdepasse, "link", "AD");
             });
             task.Start();
 
