@@ -51,7 +51,7 @@ public class ServiceScript : MonoBehaviour
 
                  }
                // il faut changer Le login et le mot de passe par le playerPrefs
-               user =  clientService.GetUser("PJJD4552", "Nourra123456@", "LDAP://vipadyleg.si.francetelecom.fr:636/DC=ad,DC=francetelecom,DC=fr", "AD");
+               user =  clientService.GetUser("USERNAME", "MDP", "LINK", "AD");
         return clientService;
            
        
